@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>สร้าง Party | Ha Party</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a class="logo" href="/">Ha <span>Party</span></a>
+        <nav id="navActions" class="nav-actions"></nav>
+      </div>
+    </header>
+    <main class="page-main">
+      <div class="container form-layout">
+        <span class="eyebrow">CREATE YOUR TEAM</span>
+        <h1 class="page-title" id="formTitle">สร้าง Party ใหม่</h1>
+        <p class="page-subtitle">
+          กำหนดเกม เวลา และรายละเอียดเพื่อให้ผู้เล่นคนอื่นเข้าร่วมทีม
+        </p>
+        <section class="panel">
+          <div id="formMessage" class="notice hidden"></div>
+          <form id="partyForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="game_id">เกมที่ต้องการเล่น *</label
+                ><select
+                  class="form-control"
+                  id="game_id"
+                  name="game_id"
+                  required
+                ></select>
+              </div>
+              <div class="form-group">
+                <label for="name">ชื่อ Party *</label
+                ><input
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  required
+                  minlength="3"
+                  maxlength="120"
+                  placeholder="เช่น หาทีมแรงค์ตอนเย็น"
+                />
+              </div>
+              <div class="form-group">
+                <label for="max_members">จำนวนสมาชิกทั้งหมด *</label
+                ><input
+                  class="form-control"
+                  id="max_members"
+                  name="max_members"
+                  type="number"
+                  min="2"
+                  max="20"
+                  value="5"
+                  required
+                /><small class="small-muted">รวมเจ้าของ Party (2-20 คน)</small>
+              </div>
+              <div class="form-group">
+                <label for="play_time">วันและเวลาเล่น *</label
+                ><input
+                  class="form-control"
+                  id="play_time"
+                  name="play_time"
+                  type="datetime-local"
+                  required
+                />
+              </div>
+              <div class="form-group full">
+                <label for="description">รายละเอียด Party</label
+                ><textarea
+                  class="form-control"
+                  id="description"
+                  name="description"
+                  placeholder="เช่น โหมดที่เล่น ระดับแรงค์ หรือเงื่อนไขการเข้าทีม"
+                ></textarea>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" id="submitButton">
+                สร้าง Party</button
+              ><a class="btn btn-outline" href="/">ยกเลิก</a>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a class="logo" href="/">Ha <span>Party</span></a>
+        <p>© 2026 Ha Party</p>
+      </div>
+    </footer>
+    <script src="/create-party.js"></script>
+  </body>
+</html>

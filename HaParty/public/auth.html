@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>บัญชี | Ha Party</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container nav-inner"><a class="logo" href="/">Ha <span>Party</span></a>
+            <nav id="navActions" class="nav-actions"><a class="btn btn-outline" href="/">หน้าแรก</a></nav>
+        </div>
+    </header>
+    <main class="auth-wrap">
+        <section class="panel auth-card"><span class="eyebrow">WELCOME TO HA PARTY</span>
+            <h1 id="authTitle">ยินดีต้อนรับกลับ</h1>
+            <p id="authDesc">เข้าสู่ระบบเพื่อค้นหาและเข้าร่วมทีม</p>
+            <div class="auth-tabs"><button id="loginTab" class="auth-tab active">เข้าสู่ระบบ</button><button
+                    id="registerTab" class="auth-tab">สมัครสมาชิก</button></div>
+            <div id="authMessage" class="notice hidden"></div>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group"><label>ชื่อผู้ใช้หรืออีเมล</label><input class="form-control" name="login"
+                        required autocomplete="username"></div>
+                <div class="form-group"><label>รหัสผ่าน</label><input class="form-control" type="password"
+                        name="password" required autocomplete="current-password"></div><button
+                    class="btn btn-primary">เข้าสู่ระบบ</button>
+            </form>
+            <form id="registerForm" class="auth-form hidden">
+                <div class="form-group"><label>ชื่อผู้ใช้</label><input class="form-control" name="username"
+                        minlength="3" maxlength="50" required></div>
+                <div class="form-group"><label>อีเมล</label><input class="form-control" name="email" type="email"
+                        required></div>
+                <div class="form-group"><label>รหัสผ่าน (อย่างน้อย 8 ตัว)</label><input class="form-control"
+                        name="password" type="password" minlength="8" required></div><button
+                    class="btn btn-primary">สมัครสมาชิก</button>
+            </form>
+            <div class="auth-foot">Ha Party ช่วยให้คุณหาเพื่อนร่วมทีมสำหรับเกมที่ชอบ</div>
+        </section>
+    </main>
+    <script src="/auth.js"></script>
+</body>
+
+</html>

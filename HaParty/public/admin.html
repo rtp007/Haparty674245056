@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Admin | Ha Party</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container nav-inner"><a class="logo" href="/">Ha <span>Party</span></a>
+            <nav id="navActions" class="nav-actions"></nav>
+        </div>
+    </header>
+    <main class="page-main">
+        <div class="container"><span class="eyebrow">ADMIN CONTROL PANEL</span>
+            <h1 class="page-title">จัดการระบบ</h1>
+            <p class="page-subtitle">จัดการข้อมูลผู้ใช้ เกม และ Party ตามขอบเขตโครงงาน</p>
+            <div id="adminMessage" class="notice hidden"></div>
+            <div id="stats" class="stats-grid"></div>
+            <div class="admin-tabs"><button class="admin-tab active" data-tab="users">จัดการผู้ใช้</button><button
+                    class="admin-tab" data-tab="games">จัดการเกม</button><button class="admin-tab"
+                    data-tab="parties">จัดการ Party</button></div>
+            <section class="panel">
+                <div id="adminContent">กำลังโหลด...</div>
+            </section>
+        </div>
+    </main>
+    <script src="/admin.js"></script>
+</body>
+
+</html>
